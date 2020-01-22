@@ -238,7 +238,7 @@ rm -f    $GISDBASE/$LOCATION_NAME/sub_${GIS_OPT_AREA}ID$ID/.gislock
 # export GISBASE=$( grep  gisbase   $(which grass78) | awk \'{ if(NR==2) { gsub ("\\"","" ) ; print $3 }  }\' )
 export GISBASE=/usr/lib/grass78
 export PATH=$PATH:$GISBASE/bin:$GISBASE/scripts
-export LD_LIBRARY_PATH="$GISBASE/lib"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$GISBASE/lib"
 export GRASS_LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 export PYTHONPATH="$GISBASE/etc/python:$PYTHONPATH"
 export MANPATH=$MANPATH:$GISBASE/man
@@ -307,7 +307,7 @@ rm -f    $GISDBASE/$LOCATION_NAME/sub_${GIS_OPT_AREA}ID$ID/.gislock
 # export GISBASE=$( grep  gisbase   $(which grass78) | awk \'{ if(NR==2) { gsub ("\\"","" ) ; print $3 }  }\' )
 export GISBASE=/usr/lib/grass78
 export PATH=$PATH:$GISBASE/bin:$GISBASE/scripts
-export LD_LIBRARY_PATH="$GISBASE/lib"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$GISBASE/lib"
 export GRASS_LD_LIBRARY_PATH="$LD_LIBRARY_PATH"
 export PYTHONPATH="$GISBASE/etc/python:$PYTHONPATH"
 export MANPATH=$MANPATH:$GISBASE/man
